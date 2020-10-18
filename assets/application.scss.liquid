@@ -1,0 +1,121 @@
+// Put your styles in this file.
+// Shopify will compile SCSS/SASS on each deploy.
+// Note: "@import" rules aren’t supported.
+
+
+
+// FONTS
+@font-face {
+    font-family: "Pacifico-Regular";
+    src: url('{{ "Font-Pacifico-Regular.ttf" | asset_url }}') format("truetype");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraLight";
+    src: url('{{ "Font-Nunito-ExtraLight.ttf" | asset_url }}') format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Nunito-Regular";
+    src: url('{{ "Font-Nunito-Regular.ttf" | asset_url }}') format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Nunito-SemiBold";
+    src: url('{{ "Font-Nunito-SemiBold.ttf" | asset_url }}') format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Nunito-ExtraBold";
+    src: url('{{ "Font-Nunito-ExtraBold.ttf" | asset_url }}') format("truetype");
+    font-weight: 800;
+}
+
+//   TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    font-family: "Nunito-Regular", sans-serif;
+}
+
+ul>li>a {
+    font-family: "Nunito-SemiBold", sans-serif;
+
+}
+
+// CSS RESET
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin-top: 73px;
+}
+
+// BUTTONS
+.btn {
+    position: relative;
+    font-family: "Nunito-SemiBold", sans-serif;
+    appearance: none;
+    outline: none;
+    padding: 10px 30px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.2s ease;
+}
+
+.btn.btn__primary {
+    color: var(--white);
+    border: 3px solid var(--yellow);
+}
+
+.btn.btn__primary:hover {
+    background-color: var(--white);
+    color: var(--black);
+    transform: translateX(3px);
+    transition: 0.3s ease;
+}

@@ -1,0 +1,30 @@
+{{ 'hero.scss' | asset_url | stylesheet_tag }}
+<section class="hero">
+<div class="hero__bg" style="background-image:url('https://www.wareable.com/media/imager/202007/35003-original.jpg') "></div>
+<div class="hero__mask"></div>    
+<div class="hero__btn">
+        <button class="btn btn__primary">Check it</button>
+    </div>
+</section>
+
+
+
+<!-- <img src="{{block.settings.bannerImage | img_url: 'large' }}" >
+
+{% schema %}
+{
+      "blocks": [
+        {
+          "type": "hero",
+          "name": "Hero Banner",
+          "settings": [
+            {
+              "id": "bannerImage",
+              "type": "image_picker",
+              "label": "Banner Image"
+            }
+          ]
+        } 
+    ]
+}
+  {% endschema %} -->
