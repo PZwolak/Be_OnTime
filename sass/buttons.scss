@@ -1,0 +1,39 @@
+.btn {
+    position: relative;
+    font-family: "Nunito-ExtraBold", sans-serif;
+    appearance: none;
+    outline: none;
+    padding: 10px 30px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.2s ease;
+    min-width: 175px;
+
+    &.btn {
+        &__primary {
+            color: var(--white);
+            border: 3px solid var(--yellow);
+
+            &:hover {
+                background-color: var(--white);
+                color: var(--black);
+                transform: translateX(3px);
+                transition: 0.3s ease;
+            }
+        }
+
+        &__secondary {
+            color: var(--black);
+            border: 3px solid var(--yellow);
+
+            &:hover {
+                color: var(--yellow);
+                transform: translateX(3px);
+                transition: 0.3s ease;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{{ 'newProduct.scss' | asset_url | stylesheet_tag }}
+<section class="new-product container">
+    {% for product in collections.frontpage.products limit:1 %}
+    <div class="new-product__inner">
+
+        <div class="new-product__left">
+            <div class="new-product__image">
+                <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+            </div>
+        </div>
+
+        <div class="new-product__right">
+            <div class="new-product__header" ><h2>The latest watch</h2></div>
+            <div class="new-product__name" ><h3>{{ product.title }}</h3></div>
+            <div class="new-product__price" ><span>{{ product.price | money }}</span></div>
+            <div class="new-product__description"><p>{{ product.description | truncate:180 }}</p></div>
+            <div class="new-product__btn" >
+                <a href="{{ product.url | within: collection }}"><button class="btn btn__secondary">See more</button></a>
+            </div>
+        </div>
+
+      </a>
+    </div>
+  {% endfor %}
+</section>

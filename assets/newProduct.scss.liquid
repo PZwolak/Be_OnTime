@@ -1,0 +1,74 @@
+.new-product {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.new-product::before,
+.new-product::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 40%;
+    background-color: var(--yellow);
+}
+
+.new-product::after {
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: initial;
+
+}
+
+.new-product__inner {}
+
+.new-product__left {
+    text-align: center;
+    padding: 0 15px 15px 15px;
+}
+
+.new-product__right {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.new-product__description {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.new-product__price span {
+    font-family: "Nunito-SemiBold";
+    font-size: 30px;
+}
+
+// .new-product__header h2 {
+//     font-size: var(--fs-3)
+// }
+
+@media(min-width:768px) {
+    .new-product__inner {
+        display: flex;
+    }
+
+    .new-product__left {
+        width: 60%;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .new-product__right {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 0 30px;
+    }
+}

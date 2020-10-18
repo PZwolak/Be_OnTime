@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Pacifico-Regular";
+    src: url('{{ "Font-Pacifico-Regular.ttf" | asset_url }}') format("truetype");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraLight";
+    src: url('{{ "Font-Nunito-ExtraLight.ttf" | asset_url }}') format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Nunito-Regular";
+    src: url('{{ "Font-Nunito-Regular.ttf" | asset_url }}') format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Nunito-SemiBold";
+    src: url('{{ "Font-Nunito-SemiBold.ttf" | asset_url }}') format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Nunito-ExtraBold";
+    src: url('{{ "Font-Nunito-ExtraBold.ttf" | asset_url }}') format("truetype");
+    font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    font-family: "Nunito-Regular", sans-serif;
+    color: var(--black);
+}
+
+p {
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    font-size: var(--fs-1);
+    margin: 0 40px;
+}
+
+h2 {
+    position: relative;
+    font-size: var(--fs-3);
+    font-family: "Nunito-SemiBold";
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--yellow);
+    }
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    >li {
+        >a {
+            font-family: "Nunito-SemiBold", sans-serif;
+        }
+    }
+}

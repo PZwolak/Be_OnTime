@@ -1,0 +1,149 @@
+.collection {}
+
+.collection__header {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.collection__content {
+    display: flex;
+}
+
+.product {
+    width: 33.3333%;
+    padding: 30px 20px;
+
+}
+
+.product__inner {
+    position: relative;
+    overflow: hidden;
+    background: var(--dark-grey);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.product__inner:hover {
+    padding-bottom: 50px;
+    transition: 0.5s ease;
+}
+
+.product__circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    transform: translate(-28%, -26%);
+    transition: 0.2s ease;
+}
+
+.product__inner:hover .product__circle {
+    transform: translate(-16%, -62%) scale(1.5);
+    transition: 0.5s ease;
+}
+
+.product__image {
+    position: relative;
+    margin: 100px auto 30px auto;
+    width: 80%;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.product__inner:hover .product__image {
+    margin: 60px auto 20px auto;
+    transition: 0.5s ease;
+}
+
+.product__name {
+    text-align: center;
+}
+
+.product__name>h3 {
+    color: var(--white);
+    font-family: 'Nunito-ExtraBold';
+    font-size: var(--fs-4);
+}
+
+.product__color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.2s ease;
+    transform: translateY(20px);
+}
+
+.product__inner:hover .product__color {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.product__color-text {
+    margin-right: 15px;
+}
+
+.product__color-text>span {
+    text-transform: uppercase;
+    font-family: 'Nunito-SemiBold';
+    color: var(--white);
+}
+
+.product__color-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.product__color-circle--Black {
+    background-color: black;
+}
+
+.product__color-circle--Pink {
+    background-color: pink;
+}
+
+.product__color-circle--Silver {
+    background-color: silver;
+}
+
+.product__price {
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s ease;
+    transform: translateY(20px);
+}
+
+.product__inner:hover .product__price {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s ease;
+    transition-delay: 0.4s;
+}
+
+.product__price>span {
+    color: white;
+    font-family: 'Nunito-SemiBold';
+    font-size: var(--fs-5);
+}
+
+.product__see-btn {
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s ease;
+    transform: translateY(20px);
+}
+
+.product__inner:hover .product__see-btn {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s ease;
+    transition-delay: 0.6s;
+}

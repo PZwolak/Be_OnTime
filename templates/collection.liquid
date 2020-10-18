@@ -1,18 +1,41 @@
-{% paginate collection.products by 2 %}
-<h1>{{ collection.title }}</h1>
-{% for product in collection.products %}
-<div>
-  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-  {{ product.price | money }}
-  {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
-  <a href="{{ product.url | within: collection }}">
-    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-  </a>
+{{ 'collection.scss' | asset_url | stylesheet_tag }}
+<section class="collection container">
+  <div class="collection__header"><h2>Choose the one that suits you best</h2></div>
+  <div class="collection__content">
+
+  
+  {% paginate collection.products by 6 %}
+  <!-- <h1>{{ collection.title }}</h1> -->
+ 
+  {% for product in collection.products %}
+  <div class="product">
+    <div class="product__inner">
+      <div class="product__circle"></div>
+      <div class="product__image"><img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"></div>
+      <div class="product__name"><h3>{{ product.title }}</h3></div>
+      <div class="product__color">
+        <div class="product__color-text"><span>color:</span></div>
+        {% for variant in product.variants %}
+        {% if variant.available %}
+        <div class="product__color-circle product__color-circle--{{ variant.title }}"></div>
+        {% endif %}
+      {% endfor %}
+      </div>
+      <div class="product__price"><span>{{ product.price | money }}</span></div>
+      <div class="product__see-btn"><a href="{{ product.url | within: collection }}"><button class="btn btn__primary">see more</button></a></div>
+    </div>
+    
+    
+    {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+
+  </div>
+  {% else %}
+  <p>no matches</p>
+  {% endfor %}
+  {% if paginate.pages > 1 %}
+  {{ paginate | default_pagination }}
+  {% endif %}
+  {% endpaginate %}
 </div>
-{% else %}
-<p>no matches</p>
-{% endfor %}
-{% if paginate.pages > 1 %}
-{{ paginate | default_pagination }}
-{% endif %}
-{% endpaginate %}
+
+</section>
