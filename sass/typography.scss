@@ -42,11 +42,23 @@ a {
 
 p {
     letter-spacing: 1.5px;
+    margin-bottom: 30px;
 }
 
 h1 {
+    position: relative;
     font-size: var(--fs-1);
-    margin: 0 40px;
+    font-family: "Nunito-SemiBold";
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        left: 0;
+        width: 120px;
+        height: 3px;
+        background-color: var(--yellow);
+    }
 }
 
 h2 {

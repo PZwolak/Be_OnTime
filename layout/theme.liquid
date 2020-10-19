@@ -9,14 +9,8 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }}
-  <!-- Header hook for plugins -->
-  {{ 'application.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'variables.scss' | asset_url | stylesheet_tag }}
-  {{ 'header.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'footer.scss' | asset_url | stylesheet_tag }}
   {{ 'styles.scss' | asset_url | stylesheet_tag }}
-  <!-- {{ 'bootstrap-grid.min.css' | asset_url | stylesheet_tag }} -->
-  {{ 'application.js' | asset_url | script_tag }}
+  
 </head>
 
 <body>
@@ -27,6 +21,8 @@
     {{ content_for_layout }}
   </main>
   {% section 'footer' %}
+  {{ 'application.js' | asset_url | script_tag }}
+  {{ 'script.js' | asset_url | script_tag }}
 </body>
 
 </html>

@@ -1,0 +1,149 @@
+.product-description {
+    margin-top: 115px;
+    margin-bottom: 100px;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        position: relative;
+        width: 100%;
+
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: -15px;
+            display: block;
+            width: 3px;
+            height: 20%;
+            background-color: var(--yellow);
+        }
+
+        &:after {
+            top: initial;
+            right: -15px;
+            bottom: 0;
+            left: initial;
+        }
+    }
+
+    &__right {
+        width: 100%;
+
+
+        >form {
+            top: 100px;
+            position: sticky;
+        }
+    }
+
+    &__description {
+        font-family: "Nunito-Regular", sans-serif;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: var(--fs-4);
+
+        }
+
+        >p:nth-child(1) {
+            font-size: 18px;
+
+
+        }
+    }
+
+    &__price {
+        margin-bottom: 22px;
+
+        >span {
+            font-family: "Nunito-SemiBold", sans-serif;
+            font-size: var(--fs-2);
+        }
+    }
+
+    &__color {
+        margin-bottom: 16px;
+
+        &-text {
+            >span {
+                font-family: "Nunito-SemiBold", sans-serif;
+                font-size: var(--fs-4);
+            }
+
+        }
+    }
+
+    &__quantity {
+        margin-bottom: 16px;
+
+        &-text {
+            >span {
+                font-family: "Nunito-SemiBold", sans-serif;
+                font-size: var(--fs-4);
+            }
+        }
+    }
+
+    &__add-to-cart {
+        >button {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width:576px) {
+    .product-description {
+        &__left {
+            width: 55%;
+            padding-right: 15px;
+        }
+
+        &__right {
+            width: 45%;
+            padding-left: 30px;
+        }
+
+    }
+}
+
+@media(min-width:768px) {
+    .product-description {
+        margin-top: 150px;
+
+        &__left {
+            width: 60%;
+
+        }
+
+        &__right {
+            width: 40%;
+        }
+
+        h2 {
+            font-size: var(--fs-3);
+        }
+
+        p:nth-child(1) {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .product-description {
+        &__left {
+            width: 70%;
+        }
+
+        &__right {
+            width: 30%;
+        }
+    }
+}

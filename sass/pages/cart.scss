@@ -1,0 +1,25 @@
+.cart {
+    &__element {
+        &-inner {
+            display: flex;
+        }
+    }
+
+    &__image {
+        width: 20%;
+
+    }
+
+    &__name {
+        width: 13%;
+    }
+
+    &__price {
+        width: 12%;
+
+    }
+
+    &__color {
+        width: 50px;
+    }
+}

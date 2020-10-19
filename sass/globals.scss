@@ -50,3 +50,26 @@ body {
         font-size: var(--fs-2);
     }
 }
+
+// OPTION COLORS
+.product__color,
+.cart__color {
+    &-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        &--Black {
+            background-color: black;
+        }
+
+        &--Pink {
+            background-color: pink;
+        }
+
+        &--Silver {
+            background-color: silver;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+<section class="product-description container">
+    <div class="product-description__inner">
+
+        <div class="product-description__left">
+            <div  class="product-description__description">{{ product.description }}</div>
+        </div>
+        <div class="product-description__right">
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+                <div class="product-description__price">
+                    <span>{{ current_variant.price | money }}</span>
+                </div>
+                <div class="product-description__color">
+                    <div class="product-description__color-text"><span>Color:</span></div>
+                    <select name="id" id="productSelect">
+                        {% for variant in product.variants %}
+                          {% if variant.available %}
+                            <option value="{{ variant.id }}">
+                              {{ variant.title }} - {{ variant.price | money }}
+                            </option>
+                          {% else %}
+                            <option disabled="disabled">
+                              {{ variant.title }} - sold out
+                            </option>
+                          {% endif %}
+                        {% endfor %}
+                      </select>
+                </div>
+
+                <div class="product-description__quantity">
+
+                    <div class="product-description__quantity-text">
+                        <span>Quantity:</span>
+                    </div>
+                    <div class="product-description__quantity-input">
+                        <input type="number" id="Quantity" name="quantity" value="1" min="1">
+                    </div>
+
+
+                </div>
+
+                <div class="product-description__add-to-cart">
+
+                    <button class="btn btn__secondary" type="submit" name="add" id="AddToCart">Add to cart</button>
+                </div>
+                
+
+                
+               
+                
+                
+              </form>
+        </div>
+    </div>
+</section>
+
+
+  

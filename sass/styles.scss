@@ -2,5 +2,19 @@
 @import "globals";
 @import "typography";
 @import "buttons";
+@import "forms";
 
-@import "header/header.scss";
+@import "sections/header.scss";
+@import "sections/footer.scss";
+
+@import "slick/slick.scss";
+@import "slick/slickEdit.scss";
+
+@import "pages/product.scss";
+@import "pages/cart.scss";
+
+@import "sections/hero.scss";
+@import "sections/newProduct.scss";
+@import "sections/collection.scss";
+@import "sections/productImages.scss";
+@import "sections/productDestcription.scss";

@@ -1,0 +1,26 @@
+.hero {
+    position: relative;
+    height: 80vh;
+
+    &__bg {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--yellow);
+        opacity: 0.1;
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
