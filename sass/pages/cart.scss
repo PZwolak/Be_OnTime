@@ -1,25 +1,155 @@
 .cart {
+    &__content {
+        margin-top: 70px;
+
+        .checkout {
+            margin-top: 125px;
+            margin-bottom: 60px;
+
+            &__sub-total {
+                font-size: var(--fs-2);
+                font-family: 'Nunito-SemiBold';
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__header {
+        padding-top: 30px;
+    }
+
     &__element {
+        margin-bottom: -80px;
+
+        &:nth-child(1) {
+            margin-bottom: 10px;
+
+            .cart {
+
+                &__image,
+                &__name,
+                &__price,
+                &__color,
+                &__remove,
+                &__add,
+                &__total {
+                    border: none;
+
+                    >span {
+                        font-size: 18px;
+                        font-family: "Nunito-SemiBold";
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(even) {
+            .cart__image {
+                &:nth-last-child(1) {
+                    border: none;
+
+                    >img {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            .cart__image {
+                &:nth-child(1) {
+                    border: none;
+
+                    >img {
+                        display: none;
+                    }
+                }
+            }
+        }
+
         &-inner {
             display: flex;
+
+
         }
+    }
+
+    &__image,
+    &__name,
+    &__price,
+    &__color,
+    &__remove,
+    &__add,
+    &__total {
+        border-top: 3px solid var(--yellow);
+        padding-top: 20px;
+        padding-left: 15px;
+
+
     }
 
     &__image {
         width: 20%;
 
+        img {
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s ease;
+            }
+        }
     }
 
     &__name {
-        width: 13%;
-    }
-
-    &__price {
-        width: 12%;
-
+        width: 15%;
     }
 
     &__color {
-        width: 50px;
+        width: 6%;
+        min-width: 50px;
+    }
+
+    &__price {
+        width: 15%;
+    }
+
+    &__total {
+        width: 10%;
+    }
+
+    &__remove {
+        width: 35px;
+        min-width: 35px;
+
+        svg {
+            color: var(--dark-grey);
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--yellow);
+                transition: 0.3s ease;
+            }
+        }
+    }
+
+    &__add {
+        width: 35px;
+        min-width: 35px;
+
+        svg {
+            color: var(--dark-grey);
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--yellow);
+                transition: 0.3s ease;
+            }
+        }
     }
 }
