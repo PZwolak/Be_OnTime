@@ -15,8 +15,13 @@
     }
 
     .product {
+        display: none;
         width: 100%;
         padding: 30px 20px;
+
+        &.active {
+            display: block;
+        }
 
         &__inner {
             position: relative;

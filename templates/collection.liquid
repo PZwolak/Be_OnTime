@@ -1,14 +1,50 @@
 {{ 'collection.scss' | asset_url | stylesheet_tag }}
 <section class="collection container">
   <div class="collection__header"><h2>Choose the one that suits you best</h2></div>
+
+<div class="filters">
+
+<div class="filters__element filters__tags">
+  <div class="filters__name"><span>Tags:</span></div>
+  <select class="filters__tags-select">
+    <option value="all">All</option>
+    {% for tag in collection.all_tags %} 
+    <option value="{{ tag | handle }}">{{ tag }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div class="filters__element filters__vendors">
+  <div class="filters__name"><span>Brands:</span></div>
+    <select class="filters__vendors-select">
+      <option value="all">All</option>
+      {% for product_vendor in shop.vendors %}
+      <option value="{{ product_vendor | handle }}">{{ product_vendor }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="filters__element filters__sort">
+    <div class="filters__name"><span>Sort by:</span></div>
+    <select class="filters__sort-select">
+      <option value="all">All</option>
+      <option value="name-az">Name - A to Z</option>
+      <option value="name-za">Name - Z to A</option>
+      <option value="price-lh">Price - low to high</option>
+      <option value="price-hl">Price - high to low</option>
+    </select>
+  </div>
+
+  </div>
+
+
   <div class="collection__content">
 
-  
   {% paginate collection.products by 6 %}
-  <!-- <h1>{{ collection.title }}</h1> -->
  
   {% for product in collection.products %}
-  <div class="product">
+  <div class="product active"  data-tags='{% for tag in product.tags %}{{ tag| handle }}{%if forloop.last %}{% else %},{% endif %}{% endfor %}' data-vendor="{{product.vendor | handle}}" data-price="{{product.price}}" data-name="{{product.title}}">
+
     <div class="product__inner">
       <div class="product__circle"></div>
       <div class="product__image"><img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"></div>
