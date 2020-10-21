@@ -14,7 +14,7 @@
         display: block;
         width: 3px;
         height: 40%;
-        background-color: var(--yellow);
+        background-color: $yellow;
     }
 
     &:after {
@@ -42,7 +42,7 @@
 
     &__price {
         span {
-            font-family: "Nunito-SemiBold";
+            font-family: $ff-semi-bold, sans-serif;
             font-size: 30px;
         }
     }

@@ -1,9 +1,11 @@
 .collection {
+    min-height: calc(100vh - 143px);
+
     &__header {
         padding-top: 40px;
 
         >h2 {
-            font-size: var(--fs-4);
+            font-size: $fs-4;
         }
     }
 
@@ -26,7 +28,7 @@
         &__inner {
             position: relative;
             overflow: hidden;
-            background: var(--dark-grey);
+            background: $dark-grey;
             border-radius: 15px;
             cursor: pointer;
             transition: 0.2s ease;
@@ -76,7 +78,7 @@
             position: absolute;
             width: 400px;
             height: 400px;
-            background-color: var(--yellow);
+            background-color: $yellow;
             border-radius: 50%;
             transform: translate(-28%, -26%);
             transition: 0.2s ease;
@@ -88,15 +90,19 @@
             width: 90%;
             text-align: center;
             transition: 0.2s ease;
+
+            >img {
+                max-height: 280px;
+            }
         }
 
         &__name {
             text-align: center;
 
             >h3 {
-                color: var(--white);
-                font-family: 'Nunito-ExtraBold';
-                font-size: var(--fs-4);
+                color: $white;
+                font-family: $ff-extra-bold, sans-serif;
+                font-size: $fs-4;
             }
         }
 
@@ -113,8 +119,8 @@
 
                 >span {
                     text-transform: uppercase;
-                    font-family: 'Nunito-SemiBold';
-                    color: var(--white);
+                    font-family: $ff-semi-bold, sans-serif;
+                    color: $white;
                 }
             }
 
@@ -128,9 +134,9 @@
             transform: translateY(20px);
 
             >span {
-                color: var(--white);
-                font-family: 'Nunito-SemiBold';
-                font-size: var(--fs-5);
+                color: $white;
+                font-family: $ff-semi-bold, sans-serif;
+                font-size: $fs-5;
             }
         }
 
@@ -149,7 +155,7 @@
     .collection {
         &__header {
             >h2 {
-                font-size: var(--fs-3);
+                font-size: $fs-3;
             }
 
         }

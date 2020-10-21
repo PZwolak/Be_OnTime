@@ -1,6 +1,6 @@
 .btn {
     position: relative;
-    font-family: "Nunito-ExtraBold", sans-serif;
+    font-family: $ff-extra-bold, sans-serif;
     appearance: none;
     outline: none;
     padding: 10px 30px;
@@ -11,27 +11,27 @@
     letter-spacing: 3px;
     transition: 0.2s ease;
     min-width: 175px;
-    border-radius: 15px;
+    border-radius: 10px;
 
     &.btn {
         &__primary {
-            color: var(--white);
-            border: 3px solid var(--yellow);
+            color: $white;
+            border: 3px solid $yellow;
 
             &:hover {
-                background-color: var(--white);
-                color: var(--black);
+                background-color: $white;
+                color: $black;
                 transform: translateX(3px);
                 transition: 0.3s ease;
             }
         }
 
         &__secondary {
-            color: var(--black);
-            border: 3px solid var(--yellow);
+            color: $black;
+            border: 3px solid $yellow;
 
             &:hover {
-                color: var(--yellow);
+                color: $yellow;
                 transform: translateX(3px);
                 transition: 0.3s ease;
             }

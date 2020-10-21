@@ -37,10 +37,7 @@
 
   </div>
 
-
   <div class="collection__content">
-
-  {% paginate collection.products by 6 %}
  
   {% for product in collection.products %}
   <div class="product active"  data-tags='{% for tag in product.tags %}{{ tag| handle }}{%if forloop.last %}{% else %},{% endif %}{% endfor %}' data-vendor="{{product.vendor | handle}}" data-price="{{product.price}}" data-name="{{product.title}}">
@@ -61,17 +58,12 @@
       <div class="product__see-btn"><a href="{{ product.url | within: collection }}"><button class="btn btn__primary">see more</button></a></div>
     </div>
     
-    
     {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
 
   </div>
   {% else %}
   <p>no matches</p>
   {% endfor %}
-  {% if paginate.pages > 1 %}
-  {{ paginate | default_pagination }}
-  {% endif %}
-  {% endpaginate %}
 </div>
 
 </section>

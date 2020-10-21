@@ -1,4 +1,6 @@
 .cart {
+    min-height: calc(100vh - 143px);
+
     &__header {
         padding-top: 30px;
     }
@@ -28,7 +30,7 @@
 
                             >span {
                                 font-size: 18px;
-                                font-family: "Nunito-SemiBold";
+                                font-family: $ff-semi-bold, sans-serif;
                             }
                         }
                     }
@@ -73,7 +75,7 @@
             &__remove,
             &__add,
             &__total {
-                border-top: 3px solid var(--yellow);
+                border-top: 3px solid $yellow;
                 padding-top: 20px;
                 padding-left: 15px;
 
@@ -129,17 +131,17 @@
             }
 
             &__sub-total {
-                font-size: var(--fs-4);
-                font-family: 'Nunito-SemiBold';
+                font-size: var($fs-4);
+                font-family: $ff-semi-bold, sans-serif;
                 text-transform: uppercase;
                 margin-bottom: 20px;
 
                 @media(min-width:576px) {
-                    font-size: var(--fs-3);
+                    font-size: $fs-3;
                 }
 
                 @media(min-width:992px) {
-                    font-size: var(--fs-2);
+                    font-size: $fs-2;
                 }
             }
         }
@@ -185,7 +187,7 @@
                         right: -16.5px;
                         width: 3px;
                         height: 100%;
-                        background-color: var(--yellow);
+                        background-color: $yellow;
                     }
 
                 }
@@ -234,7 +236,7 @@
 
                     &:nth-child(2) {
                         text-align: right;
-                        font-family: "Nunito-ExtraBold";
+                        font-family: $ff-extra-bold, sans-serif;
                     }
 
                 }
@@ -284,12 +286,12 @@
         min-width: 35px;
 
         svg {
-            color: var(--dark-grey);
+            color: $dark-grey;
             transition: 0.2s ease;
             cursor: pointer;
 
             &:hover {
-                color: var(--yellow);
+                color: $yellow;
                 transition: 0.3s ease;
             }
         }
@@ -300,12 +302,12 @@
         min-width: 35px;
 
         svg {
-            color: var(--dark-grey);
+            color: $dark-grey;
             transition: 0.2s ease;
             cursor: pointer;
 
             &:hover {
-                color: var(--yellow);
+                color: $yellow;
                 transition: 0.3s ease;
             }
         }

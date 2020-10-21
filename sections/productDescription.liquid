@@ -5,6 +5,7 @@
         <div class="product-description__left">
             <div  class="product-description__description">{{ product.description }}</div>
         </div>
+        
         <div class="product-description__right">
             <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
                 <div class="product-description__price">
@@ -28,27 +29,18 @@
                 </div>
 
                 <div class="product-description__quantity">
-
                     <div class="product-description__quantity-text">
                         <span>Quantity:</span>
                     </div>
                     <div class="product-description__quantity-input">
                         <input type="number" id="Quantity" name="quantity" value="1" min="1">
                     </div>
-
-
                 </div>
 
                 <div class="product-description__add-to-cart">
-
                     <button class="btn btn__secondary" type="submit" name="add" id="AddToCart">Add to cart</button>
                 </div>
-                
 
-                
-               
-                
-                
               </form>
         </div>
     </div>

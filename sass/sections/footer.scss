@@ -2,19 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
-    border-bottom: 3px solid var(--yellow);
+    background-color: $black;
+    border-bottom: 3px solid $yellow;
     min-height: 70px;
 
     &__inner {
-        color: var(--white);
+        color: $white;
         font-size: 18px;
 
         span {
-            color: var(--white);
+            color: $white;
 
             &.logo {
-                font-family: "Pacifico-Regular", sans-serif;
+                font-family: $ff-styled, sans-serif;
             }
         }
     }

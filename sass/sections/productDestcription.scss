@@ -21,7 +21,7 @@
             display: block;
             width: 3px;
             height: 20%;
-            background-color: var(--yellow);
+            background-color: $yellow;
         }
 
         &:after {
@@ -43,12 +43,12 @@
     }
 
     &__description {
-        font-family: "Nunito-Regular", sans-serif;
+        font-family: $ff-regular, sans-serif;
         letter-spacing: 1.5px;
         margin-bottom: 30px;
 
         h2 {
-            font-size: var(--fs-4);
+            font-size: $fs-4;
 
         }
 
@@ -63,8 +63,8 @@
         margin-bottom: 22px;
 
         >span {
-            font-family: "Nunito-SemiBold", sans-serif;
-            font-size: var(--fs-2);
+            font-family: $ff-semi-bold, sans-serif;
+            font-size: $fs-2;
         }
     }
 
@@ -73,8 +73,8 @@
 
         &-text {
             >span {
-                font-family: "Nunito-SemiBold", sans-serif;
-                font-size: var(--fs-4);
+                font-family: $ff-semi-bold, sans-serif;
+                font-size: $fs-4;
             }
 
         }
@@ -85,8 +85,8 @@
 
         &-text {
             >span {
-                font-family: "Nunito-SemiBold", sans-serif;
-                font-size: var(--fs-4);
+                font-family: $ff-semi-bold, sans-serif;
+                font-size: $fs-4;
             }
         }
     }
@@ -127,7 +127,7 @@
         }
 
         h2 {
-            font-size: var(--fs-3);
+            font-size: $fs-3;
         }
 
         p:nth-child(1) {

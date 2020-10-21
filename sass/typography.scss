@@ -1,31 +1,33 @@
 @font-face {
-    font-family: "Pacifico-Regular";
+    font-family: $ff-styled;
     src: url('{{ "Font-Pacifico-Regular.ttf" | asset_url }}') format("truetype");
 }
 
 @font-face {
-    font-family: "Nunito-ExtraLight";
+    font-family: $ff-extra-light;
     src: url('{{ "Font-Nunito-ExtraLight.ttf" | asset_url }}') format("truetype");
     font-weight: 200;
 }
 
 @font-face {
-    font-family: "Nunito-Regular";
+    font-family: $ff-regular;
     src: url('{{ "Font-Nunito-Regular.ttf" | asset_url }}') format("truetype");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "Nunito-SemiBold";
+    font-family: $ff-semi-bold;
     src: url('{{ "Font-Nunito-SemiBold.ttf" | asset_url }}') format("truetype");
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "Nunito-ExtraBold";
+    font-family: $ff-extra-bold;
     src: url('{{ "Font-Nunito-ExtraBold.ttf" | asset_url }}') format("truetype");
     font-weight: 800;
 }
+
+
 
 h1,
 h2,
@@ -36,8 +38,8 @@ h6,
 p,
 span,
 a {
-    font-family: "Nunito-Regular", sans-serif;
-    color: var(--black);
+    font-family: $ff-regular, sans-serif;
+    color: $black;
 }
 
 p {
@@ -47,8 +49,8 @@ p {
 
 h1 {
     position: relative;
-    font-size: var(--fs-1);
-    font-family: "Nunito-SemiBold";
+    font-size: $fs-1;
+    font-family: $ff-semi-bold;
 
     &:after {
         position: absolute;
@@ -57,14 +59,14 @@ h1 {
         left: 0;
         width: 120px;
         height: 3px;
-        background-color: var(--yellow);
+        background-color: $yellow;
     }
 }
 
 h2 {
     position: relative;
-    font-size: var(--fs-3);
-    font-family: "Nunito-SemiBold";
+    font-size: $fs-3;
+    font-family: $ff-semi-bold;
     margin-bottom: 36px;
     letter-spacing: 1px;
 
@@ -75,7 +77,7 @@ h2 {
         left: 0;
         width: 100px;
         height: 3px;
-        background-color: var(--yellow);
+        background-color: $yellow;
     }
 }
 
@@ -86,7 +88,7 @@ h3 {
 ul {
     >li {
         >a {
-            font-family: "Nunito-SemiBold", sans-serif;
+            font-family: $ff-semi-bold, sans-serif;
         }
     }
 }

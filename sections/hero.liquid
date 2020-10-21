@@ -1,34 +1,13 @@
 {{ 'hero.scss' | asset_url | stylesheet_tag }}
 <section class="hero">
-<div class="hero__bg" style="background-image:url('https://www.wareable.com/media/imager/202007/35003-original.jpg') "></div>
-<div class="hero__mask"></div>    
-<div class="hero__btn">
-        <a href="/collections/all"><button class="btn btn__primary">Check it</button></a>
-    </div>
-    <div class="hero__header">
-      <h1>"Lost time is never found again."</h1>
-      <p>Benjamin Franklin</p>
-    </div>
+  <div class="hero__bg"
+    style="background-image:url('https://www.wareable.com/media/imager/202007/35003-original.jpg') "></div>
+  <div class="hero__mask"></div>
+  <div class="hero__btn">
+    <a href="/collections/all"><button class="btn btn__primary">Check it</button></a>
+  </div>
+  <div class="hero__header">
+    <h1>"Lost time is never found again."</h1>
+    <p>Benjamin Franklin</p>
+  </div>
 </section>
-
-
-
-<!-- <img src="{{block.settings.bannerImage | img_url: 'large' }}" >
-
-{% schema %}
-{
-      "blocks": [
-        {
-          "type": "hero",
-          "name": "Hero Banner",
-          "settings": [
-            {
-              "id": "bannerImage",
-              "type": "image_picker",
-              "label": "Banner Image"
-            }
-          ]
-        } 
-    ]
-}
-  {% endschema %} -->

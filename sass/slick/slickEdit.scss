@@ -1,7 +1,7 @@
 .slick-slider {
     >.slick-arrow {
         width: 28px;
-        color: var(--dark-grey);
+        color: $dark-grey;
         position: absolute;
         top: 50%;
 
@@ -85,7 +85,7 @@
                 content: "";
                 width: 100%;
                 height: 2px;
-                background-color: var(--grey);
+                background-color: $grey;
                 transition: 0.2s ease;
             }
 
@@ -99,7 +99,7 @@
             &.slick-active {
                 &::after {
                     height: 6px;
-                    background-color: var(--yellow);
+                    background-color: $yellow;
                     transition: 0.3s ease;
                 }
             }
