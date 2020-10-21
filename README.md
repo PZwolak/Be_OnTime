@@ -1,10 +1,13 @@
 # Be_OnTime
 Basic shop based on shopify
+
 Link to shop [Be_OnTime](https://be-ontime.myshopify.com/)
+
 Password: **nodien**
 
 ## Technology
 This project has been created on [Shopify Theme Kit](https://shopify.github.io/themekit/)
+
 For bundle, minify and autoprefix SCSS file has been installed Gulp
 
 ## Instalation and usage
